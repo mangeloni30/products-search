@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import FilteredProductTable from './FilteredProductTable'
 
 class App extends React.Component {

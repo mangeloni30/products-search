@@ -36,7 +36,7 @@ class FilteredProductTable extends React.Component {
     const { search, onlyStock } = this.state;
     return (
       <div>
-        <input 
+        <input
           type="text"
           placeholder="Search..."
           onChange={this.searchHandler}

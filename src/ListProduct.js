@@ -16,7 +16,6 @@ class ListProduct extends React.Component {
   render() {
     let mainTitle = '';
     let noStockClass = '';
-    const titulos = ['Sport', 'Electornic']
     return (
       <React.Fragment>
         <div className="main-titles">
@@ -37,14 +36,16 @@ class ListProduct extends React.Component {
                       </div>
                       <div className="name-price-container">
                         <p className={noStockClass}>{item.name}</p>
-                      <p>{item.price}</p>
+                      <p className="item-price">{item.price}</p>
                       </div>
                     </div>
                   </li>  
                 }
                 return <li>
-                    <p className={noStockClass}>{item.name}</p>
-                    <p>{item.price}</p>
+                    <div className="name-price-container">
+                      <p className={noStockClass}>{item.name}</p>
+                      <p className="item-price">{item.price}</p>
+                    </div>
                   </li>
               })
             }
@@ -64,14 +65,16 @@ class ListProduct extends React.Component {
                       </div>
                       <div className="name-price-container">
                         <p>{item.name}</p>
-                        <p>{item.price}</p>
+                        <p className="item-price">{item.price}</p>
                       </div>
                     </div>
                   </li>  
                 }
                 return  <li>
-                  <p>{item.name}</p>
-                  <p>{item.price}</p>
+                  <div className="name-price-container">
+                    <p>{item.name}</p>
+                    <p className="item-price">{item.price}</p>
+                  </div>
                 </li>
               }
           })}
