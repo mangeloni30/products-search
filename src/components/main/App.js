@@ -1,10 +1,12 @@
 import React from 'react';
-import FilteredProductTable from './FilteredProductTable'
-
+import FilteredProductTable from '../filteredProductTable/FilteredProductTable'
+/**
+ * @class App
+ * main class responsible of render all another components
+ * @extends {React.Component}
+ * @author Martin Angeloni
+ */
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     const productsStock = [
@@ -17,7 +19,7 @@ class App extends React.Component {
     ]
     return (
       <div className="App">
-        <FilteredProductTable 
+        <FilteredProductTable
           products={productsStock}
         />
       </div>

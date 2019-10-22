@@ -1,8 +1,20 @@
 import React from 'react';
 import './FilteredProductTable.css';
-import ListProduct from './ListProduct'
+import ListProduct from '../listProduct/ListProduct'
 
+/**
+ * @class FilteredProductTable
+ * @extends {React.Component}
+ * class reponsible of render the input search and list of products
+ * @author Martin Angeloni
+ */
 class FilteredProductTable extends React.Component {
+  
+  /**
+   * Creates an instance of FilteredProductTable.
+   * @param {*} props
+   * @author Martin Angeloni
+   */
   constructor(props) {
     super(props)
     this.state = {
@@ -10,25 +22,31 @@ class FilteredProductTable extends React.Component {
       onlyStock: false
     }
     this.searchHandler = this.searchHandler.bind(this)
-    this.searchingFor = this.searchingFor.bind(this)
     this.checkboxHandler = this.checkboxHandler.bind(this)
   }
 
+  /**
+   * @name searchHandler
+   * method responsible of set search state
+   * in the current input value
+   * @param {Event} e 
+   * @author Martin Angeloni
+   */
   searchHandler(e){
     this.setState({search: e.target.value})
   }
 
+  /**
+   * @name checkboxHandler
+   * method responsible of set the onlyStock state
+   * if checkbox is checked
+   * @author Martin Angeloni
+   */
   checkboxHandler() {
     if ( this.state.onlyStock === false) {
       this.setState({onlyStock: true})
     } else {
       this.setState({onlyStock: false})
-    }
-  }
-
-  searchingFor(search) {
-    return function(x) {
-      return x.name.toLowerCase().includes(search.toLowerCase()) || !search
     }
   }
 
