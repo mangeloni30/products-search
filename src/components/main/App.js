@@ -1,5 +1,6 @@
 import React from 'react';
-import FilteredProductTable from '../filteredProductTable/FilteredProductTable'
+import FilteredProductTable from '../filteredProductTable/FilteredProductTable';
+
 /**
  * @class App
  * main class responsible of render all another components
